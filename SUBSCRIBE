@@ -1,0 +1,37 @@
+PROBLEM:
+--------
+
+A new TV streaming service was recently started in Chefland called the Chef-TV.
+
+A group of N friends in Chefland want to buy Chef-TV subscriptions. 
+We know that 6 people can share one Chef-TV subscription. Also, the cost of one Chef-TV subscription is X rupees. 
+Determine the minimum total cost that the group of N friends will incur so that everyone in the group is able to use Chef-TV.
+
+=========================================================================================================================================================================================================================================================================================
+
+SOLUTION:
+---------
+
+#include <iostream>     
+using namespace std;
+
+int main(){
+	int t;
+     cin >> t;
+	while(t--){
+	    int n, x;
+	    cin >> n >> x;
+	    if(n<=6){
+	      cout << x << endl;
+	    }
+	    else if(n>=6){
+	      int round = (n + (6 - 1)) / 6;
+	      cout << round * x << endl;
+	    }
+	    else{
+	      cout << endl;
+	    }
+	}
+  
+	return 0;
+}
